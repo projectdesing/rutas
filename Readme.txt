@@ -12,3 +12,4 @@ SEGUNDA PARTE: Diagrama UML corregido y añadido
 
 Crear google Cloud
 Crear cuenta Git
+ya lo logramos
