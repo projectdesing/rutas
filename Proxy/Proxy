@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+/**
+ *
+ * @author Yareth
+ */
+
+public class Proxy{
+	
+private static Proxyd unicaInstancia = null;
+public static ArrayList<Usuario> usuarios = new ArrayList();
+
+public static Proxyd reemplazarConstructora() {
+
+if (unicaInstancia == null)
+
+unicaInstancia = new Proxy();
+
+return unicaInstancia;
+
+}
+
+@Override
+    public void iniciarSesion(Usuario user) {
+        
+        boolean entrada = false;
+        
+        for (Usuario usuario : Proxyd.usuarios) {
+            if(usuario.getUser().equalsIgnoreCase(user.getUser()) &&
+              usuario.getContraseña().equalsIgnoreCase(user.getContraseña()) &&
+              usuario.getTipoUsuario().equalsIgnoreCase(user.getTipoUsuario())){
+                pase = true;
+            }     
+        }
+        
+        if(entrada==true){
+            JOptionPane.showMessageDialog(null,"Acceso concedido a " + user.getUser());
+        if(user.getTipoUsuario().equalsIgnoreCase("pasajero")){
+            JOptionPane.showMessageDialog(null,"Acceso concedido a Pasajero");
+
+        }
+        else if(user.getTipoUsuario().equalsIgnoreCase("conductor")){
+            JOptionPane.showMessageDialog(null, "Acceso concedido a Conductor);
+
+        }
+        }else{
+            JOptionPane.showMessageDialog(null,"No tiene acceso");
+        }  
+    }
+
+
+}

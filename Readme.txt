@@ -12,4 +12,6 @@ SEGUNDA PARTE: Diagrama UML corregido y añadido
 
 Crear google Cloud
 Crear cuenta Git
-ya lo logramos
+
+
+Actualización 9/11/2018 insertado clases Usuario, proxy
