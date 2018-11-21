@@ -16,6 +16,8 @@
 
 package com.example.echo;
 
+import java.util.ArrayList;
+
 import com.google.api.server.spi.auth.EspAuthenticator;
 import com.google.api.server.spi.auth.common.User;
 import com.google.api.server.spi.config.AnnotationBoolean;
@@ -57,6 +59,62 @@ import com.google.api.server.spi.response.UnauthorizedException;
 
 public class Echo {
 
+	private static Echo unicaInstancia = null;
+	private ArrayList<Usuario> usuarios = new ArrayList<>();
+	
+	public  Echo(){
+	}
+
+
+	public static Echo reemplazarConstructora() {
+
+	if (unicaInstancia == null)
+
+	unicaInstancia = new Echo();
+
+	return unicaInstancia;
+
+	}
+	
+	@ApiMethod(name = "crearUsuario", httpMethod = ApiMethod.HttpMethod.POST,)
+	public void crearUsuario(@Named("edad") String edad, @Named("nombre") String nombre, @Named("correo") String correo, @Named("contraseña") String pass, @Named("tipo") String tipo){
+		usuarios.add(new Usuario(nombre, pass, tipo, edad, correo));
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
   /**
    * Echoes the received message back. If n is a non-negative integer, the message is copied that
    * many times in the returned message.
