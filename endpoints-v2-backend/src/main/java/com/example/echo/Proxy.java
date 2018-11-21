@@ -35,12 +35,12 @@ import com.google.api.server.spi.response.UnauthorizedException;
  */
 // [START echo_api_annotation]
 @Api(
-    name = "echo",
+    name = "proxy",
     version = "v1",
     namespace =
     @ApiNamespace(
-        ownerDomain = "echo.example.com",
-        ownerName = "echo.example.com",
+        ownerDomain = "proxy.example.com",
+        ownerName = "proxy.example.com",
         packagePath = ""
     ),
     // [START_EXCLUDE]
@@ -57,8 +57,56 @@ import com.google.api.server.spi.response.UnauthorizedException;
 )
 // [END echo_api_annotation]
 
-public class Echo {
+public class Proxy {
 
+	private static Proxy unicaInstancia = null;
+	private ArrayList<Usuario> usuarios = new ArrayList<>();
+	
+	public  Proxy(){
+	}
+
+
+	public static Proxy reemplazarConstructora() {
+
+	if (unicaInstancia == null)
+
+	unicaInstancia = new Proxy();
+
+	return unicaInstancia;
+
+	}
+	
+	@ApiMethod(name = "crearUsuario")
+	public void crearUsuario(@Named("edad") String edad, @Named("nombre") String nombre, @Named("correo") String correo, @Named("contrasena") String pass, @Named("tipo") String tipo){
+		usuarios.add(new Usuario(nombre, pass, tipo, edad, correo));
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
   /**
    * Echoes the received message back. If n is a non-negative integer, the message is copied that
    * many times in the returned message.

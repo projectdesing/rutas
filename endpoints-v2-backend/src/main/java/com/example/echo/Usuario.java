@@ -1,19 +1,19 @@
-package rutasFinal;
+package com.example.echo;
 
 public class Usuario {
 	
 	public String nombre;
-    public String contraseña;
+    public String contrasena;
     public String tipoUsuario;
     public String edad;
     public String correo;
 
 
 
-    public Usuario(String nombre, String contraseña, String tipoUsuario, String edad, String correo) {
+    public Usuario(String nombre, String contrasena, String tipoUsuario, String edad, String correo) {
 		super();
 		this.nombre = nombre;
-		this.contraseña = contraseña;
+		this.contrasena = contrasena;
 		this.tipoUsuario = tipoUsuario;
 		this.edad = edad;
 		this.correo = correo;
@@ -65,12 +65,12 @@ public class Usuario {
         this.nombre = user;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public String getTipoUsuario() {
