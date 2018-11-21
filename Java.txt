@@ -1,0 +1,297 @@
+
+-----------Interfaz iProxy -----------------
+ public void crearConductor(){
+        
+        public String nombre;
+        public String correo;
+        public String contrasena;
+        public String edad;
+        public String tipo;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+        
+        
+        
+    }
+
+   public void crearConductor(){
+        
+        public String nombre;
+        public String correo;
+        public String contrasena;
+        public String edad;
+        public String tipo;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+               
+        
+    }
+    
+
+   public void crearAdministrador(){
+        
+        public String nombre;
+        public String correo;
+        public String contrasena;
+        public String edad;
+        public String tipo;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+        
+                
+    }
+
+    public void iniciarSesion(){
+    
+    public String correo;
+    public String contrasena;
+
+    public String getCorreo() {
+        return tipo;
+    }
+
+    public void setCorreo(String tipo) {
+        this.tipo = tipo;
+    }
+    
+    public String getContrasena() {
+        return tipo;
+    }
+
+    public void setContrasena(String tipo) {
+        this.tipo = tipo;
+    }
+
+    }
+
+-----------Interfaz iUsuario-----------------
+
+public String nombre;
+    public String contrasena;
+    public String edad;
+    public String correo;
+    public String tipo;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    
+    public void crearUsuario(){
+        
+        
+    }
+
+------------Conductor --------------
+public class Conductor {
+    public String tipo;
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    
+    public Conductor consultar(String nombre){
+        Iterable<Conductor> Conductor = null;
+        for (Conductor conductor : Conductor) {
+            if (conductor.getTipo().equals(nombre)) {
+                return conductor;
+            }
+        }   
+        String conductor = "No encontrado";
+        return conductor;
+    }
+    
+    public String eliminar(String nombre){
+        for (Conductor conductor : Conductor) {
+        if (conductor.getTipo().equals(nombre)) {
+            return "conductor elimnado";
+        }
+        }
+        return "El conductor ha sido eliminado";
+    }
+}
+----------- Pasajero ------------
+public class Pasajero {
+    public String tipo;
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    
+    public Pasajero consultar(String nombre){
+        Iterable<Pasajero> Pasajero = null;
+        for (Pasajero pasajero : Pasajero) {
+            if (pasajero.getTipo().equals(nombre)) {
+                return pasajero;
+            }
+        }   
+        String pasajero = "No encontrado";
+        return pasajero;
+    }
+    
+    public String eliminar(String nombre){
+        for (Pasajero pasajero : Pasajero) {
+        if (pasajero.getTipo().equals(nombre)) {
+            return "Pasajero elimnado";
+        }
+        }
+        return "El Pasajero no ha sido eliminado";
+    }
+}
